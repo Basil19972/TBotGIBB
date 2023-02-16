@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>BollingerBands XRP</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+      body {
+        background-color: rgb(0, 0, 0);
+        font-family: Arial, sans-serif;
+      }
+      .header{
+        margin-left: 100px;
+        margin-top: 50px;
+      }
+      .wrapper {
+        background-color: rgb(255, 255, 255);
+        border: 1px solid black;
+        padding: 10px;
+        width: 400px;
+        border-radius: 15px;
+        margin-left: 100px;
+      }
+
+      h1 {
+        color: rgb(255, 255, 255);
+      }
+      .toolname{
+        color: black;
+      }
+
+      table {
+        border-collapse: collapse;
+        margin-top: 20px;
+        width: 100%;
+      }
+
+      th, td {
+        padding: 8px;
+        text-align: left;
+        border-bottom: 1px solid #ddd;
+      }
+
+      th {
+        background-color: #f2f2f2;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body class="body">
+    <h1 class="header">Ripple(XRP)/USDT</h1>
+
+    <div class="wrapper">
+      <h1 class="toolname"><%= name %></h1>
+      <table>
+        <thead>
+          <tr>
+            <th>Label</th>
+            <th>Value</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Current Price</td>
+            <td><%= currentPrice %></td>
+          </tr>
+          <tr>
+            <td>Upper Band</td>
+            <td><%= upperband %></td>
+          </tr>
+          <tr>
+            <td>Lower Band</td>
+            <td><%= lowerBand %></td>
+          </tr>
+          <tr>
+            <td>Band Distance</td>
+            <td><%= bandDistance %></td>
+          </tr>
+          <tr>
+            <td>Band Ratio</td>
+            <td><%= bandRatio %></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </body>
+</html>
