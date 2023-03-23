@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: trading-bot-deployment
+  labels:
+    name: trading-bot
+    app: trading-bot
+spec:
+  replicas: 5
+  selector:
+    matchLabels:
+      app: trading-bot
+  template:
+    metadata:
+      labels:
+        app: trading-bot
+    spec:
+      containers:
+        - name: trading-bot
+          image: basil01/tragdingbot:latest
+          ports:
+            - containerPort: 3000
+              protocol: TCP
